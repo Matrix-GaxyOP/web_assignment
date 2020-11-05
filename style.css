@@ -9,7 +9,7 @@
 
 body {
   min-height: 100vh;
-  background-image: linear-gradient(120deg, #000000, #e37c07);
+  background-image: linear-gradient(120deg, #ffffff, #e37c07);
 }
 
 .login-form {
@@ -79,7 +79,7 @@ body {
   height: 40px;
   border: none;
   border-radius: 15px;
-  background: linear-gradient(120deg, #3498db, #8e44ad, #3498db);
+  background: linear-gradient(120deg, #3498db, #ffffff, #e37c07);
   background-size: 200%;
   color: #fff;
   outline: none;
