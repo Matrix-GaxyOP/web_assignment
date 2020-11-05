@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title> Login Page</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<form id="loginForm" class="login-form">
+		<h1>Login</h1>
+	<div class="txtb">
+	<input  type='text' name="username" id="username"/> 
+	<span data-placeholder="Username"></span>
+	
+</div>
+	<div class="txtb">
+	<input type='password' name="password" id="password" />
+	<span data-placeholder="Password"></span>
+	</div>
+	<input type='submit' class="logbtn"/>
+	<br />
+	<input type='reset' class="logbtn"/>
+	</form>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+	<script type = "text/javascript">
+		$(".txtb input").on("focus",function(){
+			$(this).addClass("focus");
+			});
+		$(".txtb input").on("blur",function(){
+			if($(this).val() == "")
+			$(this).removeClass("focus");
+			});
+
+
+
+
+
+
+	document.getElementById("loginForm").onsubmit = function(e) {
+	 
+		 var name = document.getElementById("username").value;
+		 var pass = document.getElementById("password").value;
+
+           if(name==null || name=="")  {
+			    alert("Enter the valid username");
+				e.preventDefault();
+				return false;
+		   }
+		   else if(pass==null || pass==""){
+			   alert("Enter the password");
+			   e.preventDefault();
+			   return false;
+		   }
+		   else if(pass!=name){
+				alert("Invalid User");
+				e.preventDefault();
+				return false;
+		   }else{
+			   alert("Login Successful");
+			   return true;
+		   }
+			            }
+	</script>
+</body>
+</html>
